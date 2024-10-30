@@ -1,0 +1,33 @@
+/* Background for the SignIn page only */
+.signin-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  
+  background-position: center;
+
+}
+
+/* Centering and styling the sign-in button */
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin {
+  margin-bottom: 20px;
+}
+
+.custom-signin-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  
+}

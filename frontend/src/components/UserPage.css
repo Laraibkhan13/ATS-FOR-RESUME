@@ -1,0 +1,24 @@
+
+.user-page {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .user-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .custom-user-button {
+    border-radius: 50%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  

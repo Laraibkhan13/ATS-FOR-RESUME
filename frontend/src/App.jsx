@@ -1,19 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Form from './components/Form'
 import NewForm from './components/NewForm'
+import { SignedIn} from "@clerk/clerk-react";
+import SignIn from './components/SignIn';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      {/* <Form /> */}
-      <NewForm/>
-    </div>
+    <header className='container-1'>
+    <SignIn/>
+    <main className='form'>
+    <SignedIn>
+      <NewForm />
+    </SignedIn>
+  </main>
+  </header>
+    
   )
 }
 
-export default App
+export default App;
