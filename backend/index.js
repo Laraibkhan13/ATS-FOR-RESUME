@@ -29,15 +29,22 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
     // Step 3: Prepare prompt for Gemini API
     const prompt = `
-      You are a skilled ATS (Applicant Tracking System) scanner with a deep understanding in the field. Your task is to evaluate the following resume against the provided job description.
+      You are an expert ATS (Applicant Tracking System) scanner. Evaluate the following resume against the provided job description:
+      
       Resume: ${resumeText}
       Job Description: ${jobDescription}
-      Please output the percentage match between the resume and the job description, followed by matching keywords, missing keywords, specific changes to improve the match to 85% or higher, and final thoughts.
+
+      Provide the following outputs:
+      - Percentage Match
+      - Matching Keywords
+      - Missing Keywords
+      - Specific Changes to Improve Match
+      - Final Thoughts
 
     `;
 
     // Step 4: Initialize Google Generative AI with API key
-    const geminiAPI = new GoogleGenerativeAI(process.env.API_KEY);
+    const geminiAPI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
     // Step 5: Call the model
     const model = geminiAPI.getGenerativeModel({model:'gemini-1.5-flash'});
